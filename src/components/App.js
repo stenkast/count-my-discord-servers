@@ -41,7 +41,7 @@ export const App = () => {
         return setError(true);
       });
 
-    if (error == false) {
+    if (error === false) {
       setCounting(false);
       setServerCount(data.length);
     }
