@@ -94,6 +94,7 @@ export const InfoModal = ({ isInfoModalOpen, setIsInfoModalOpen }) => {
                       </ul>
                       <img
                         src="/authorization.png"
+                        alt="info-modal-help"
                         className="mt-4 w-full max-w-md"
                       />
                     </div>
