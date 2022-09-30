@@ -49,8 +49,8 @@ export const App = () => {
 
   return (
     <Div100vh>
-      <div className="h-full w-full flex flex-col justify-center items-center bg-gray text-white">
-        <div className="max-w-xl">
+      <div className="h-full flex justify-center bg-gray text-white">
+        <div className="max-w-xl mt-8">
           <div className="flex gap-2 font-medium mb-4 border-2 rounded-md border-light-blue bg-light-blue/10 p-1">
             <div>
               <InformationCircleIcon className="w-8 h-8 fill-light-blue" />
