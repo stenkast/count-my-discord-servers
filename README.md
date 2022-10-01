@@ -2,8 +2,7 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/6549ae7f-26b5-4584-9614-d2e4aacab216/deploy-status)](https://app.netlify.com/sites/velvety-khapse-a5767b/deploys)
 
-Curious to find out how many servers you are in, but can't bother to count them manually?
-This is the solution to all your problems.
+Curious to find out how many servers you are in, but can't bother to count them manually? This is the solution to all your problems.
 
 ## How it works
 
