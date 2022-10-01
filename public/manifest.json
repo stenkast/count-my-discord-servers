@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Discord Server Counter",
+  "name": "Count My Discord Servers",
   "icons": [
     {
       "src": "favicon.ico",

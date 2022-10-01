@@ -2,7 +2,12 @@ import { Dialog, Transition } from "@headlessui/react";
 import { XCircleIcon } from "@heroicons/react/24/outline";
 import { Fragment } from "react";
 
-export const InfoModal = ({ isInfoModalOpen, setIsInfoModalOpen }) => {
+type Props = {
+  isInfoModalOpen: boolean;
+  setIsInfoModalOpen: (value: boolean) => void;
+};
+
+export const InfoModal = ({ isInfoModalOpen, setIsInfoModalOpen }: Props) => {
   return (
     <Transition.Root show={isInfoModalOpen} as={Fragment}>
       <Dialog
