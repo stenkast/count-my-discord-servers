@@ -3,13 +3,14 @@ import { useState } from "react";
 import Div100vh from "react-div-100vh";
 import { InfoModal, Button } from "./components";
 import { getGuilds, getReply } from "./utils/functions";
+import { getTokenFromLocalStorage } from "./utils/localStorage";
 import { Done } from "./utils/types";
 
 export default function App() {
   const [isInfoModalOpen, setIsInfoModalOpen] = useState<boolean>(false);
   const [counting, setCounting] = useState<boolean>(false);
   const [serverCount, setServerCount] = useState<number | null>(null);
-  const [token, setToken] = useState<string>("");
+  const [token, setToken] = useState<string>(getTokenFromLocalStorage);
   const [done, setDone] = useState<Done>({
     error: false,
     message: "",
@@ -40,9 +41,8 @@ export default function App() {
               <InformationCircleIcon className="w-8 h-8 fill-light-blue" />
             </div>
             <p>
-              Sharing your token can be dangerous. This page does not use your
-              token in any harmful way, but uses it to authenticate with Discord
-              to get your server count.{" "}
+              Sharing your token can be dangerous. This page does not use your token in any harmful
+              way, but uses it to authenticate with Discord to get your server count.{" "}
               <a
                 target="_blank"
                 rel="noreferrer"
@@ -71,24 +71,14 @@ export default function App() {
               placeholder="Ek8Mof0kYrCSp.WlNM7SNDZ4x3ZqL01YjOA6INjdz2D4I.NwFdHLxoH2yGpN3RRzdQhP8G"
             />
           </div>
-          <Button
-            label="Count"
-            disabled={counting}
-            counting={counting}
-            onClick={getGuildCount}
-          />
+          <Button label="Count" disabled={counting} counting={counting} onClick={getGuildCount} />
           <p className="text-white mt-4 h-10 text-xl">
             {serverCount &&
-              `You are in ${serverCount} servers at the moment. ${getReply(
-                serverCount
-              )}`}
+              `You are in ${serverCount} servers at the moment. ${getReply(serverCount)}`}
             {done.error && done.message}
           </p>
         </div>
-        <InfoModal
-          isInfoModalOpen={isInfoModalOpen}
-          setIsInfoModalOpen={setIsInfoModalOpen}
-        />
+        <InfoModal isInfoModalOpen={isInfoModalOpen} setIsInfoModalOpen={setIsInfoModalOpen} />
       </div>
     </Div100vh>
   );
