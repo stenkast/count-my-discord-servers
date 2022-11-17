@@ -3,7 +3,7 @@ import { useState } from "react";
 import Div100vh from "react-div-100vh";
 import { InfoModal, Button } from "./components";
 import { getGuilds, getReply } from "./utils/functions";
-import { getTokenFromLocalStorage } from "./utils/localStorage";
+import { getTokenFromLocalStorage, saveTokenToLocalStorage } from "./utils/localStorage";
 import { Done } from "./utils/types";
 
 export default function App() {
@@ -28,6 +28,7 @@ export default function App() {
       setDone({ error, message });
       return;
     }
+    saveTokenToLocalStorage(token);
     setCounting(false);
     setServerCount(guilds.length);
   };
